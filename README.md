@@ -1,6 +1,7 @@
 # spider-scraper
  Tool to look for all directories in a website 
  ################################
+
  HOW TO USE SPIDER-SCRAPER:
  
 usage: PowerfulScraping.py [-h] -u URL [-s]
