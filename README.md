@@ -17,11 +17,11 @@ usage: spider.py [-h] -u URL [-s]
 Web scraping tool
 
 Options:
-  -h, --help : show this help message and exit
+  `-h, --help` : show this help message and exit
   
-  -u URL, --url : URL  URL to scrape
+  `-u URL, --url` : URL  URL to scrape
 
-  -s, --save : Saves output to a .txt file
+ `-s, --save` : Saves output to a .txt file
   
   
 Optional arguments:
