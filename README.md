@@ -16,10 +16,13 @@ usage: spider.py [-h] -u URL [-s]
 
 Web scraping tool
 
-options:
+Options:
   -h, --help : show this help message and exit
+  
   -u URL, --url : URL  URL to scrape
-  -s, --save : Save output to a .txt file
+
+  -s, --save : Saves output to a .txt file
+  
   
 Optional arguments:
 - `-A, --aggressive`: Number of threads for aggressive scan (default: 4)
