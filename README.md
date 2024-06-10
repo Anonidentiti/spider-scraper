@@ -19,7 +19,7 @@ Web scraping tool
 Options:
   `-h, --help` : show this help message and exit
   
-  `-u URL, --url` : URL  URL to scrape
+  `-u URL, --url` : URL to scrape
 
  `-s, --save` : Saves output to a .txt file
   
