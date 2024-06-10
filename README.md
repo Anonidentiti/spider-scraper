@@ -2,7 +2,7 @@
  Tool to scrape all directories in a website but still on Beta
  
 ## Installation:
-1. git clone https://github.com/Anonidentiti/spider-scarper.git
+1. git clone https://github.com/Anonidentiti/spider-scraper.git
 2. Install the required dependencies using 
 3. pip3 install -r requirements.txt
    or 
