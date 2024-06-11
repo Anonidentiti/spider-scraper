@@ -1,36 +1,22 @@
-## spider-scraper:
- Tool to scrape all directories in a website but still on Beta
- 
-## Installation:
+# Spider Scraper
+
+Spider Scraper is a powerful and versatile web scraping tool designed to efficiently extract data from websites. Whether you're gathering data for research, analysis, or other purposes, Spider Scraper provides a simple yet effective way to scrape the web.
+
+## Features
+
+- Efficiently scrape web pages and follow links
+- Handle JavaScript-based links and external scripts
+- Option to save scraped links to a file
+- Aggressive scan mode for faster scraping
+
+## Installation
 1. git clone https://github.com/Anonidentiti/spider-scraper.git
-2. Install the required dependencies using 
-3. pip3 install -r requirements.txt
-   or 
-   pip install -r requirements.txt
-   (might depend on version)
-   
-## HOW TO USE SPIDER-SCRAPER:
+2 install the required dependencies, run:
+  pip install -r requirements.txt
+  or
+  pip3 install -r requirements.txt
+## usage
+python3 spider.py -u <url> -s <output_file> -A <aggressive_level_in_number>
 
- 
-usage: spider.py [-h] -u URL [-s]
 
-Web scraping tool
 
-Options:
-  `-h, --help` : show this help message and exit
-  
-  `-u URL, --url` : URL to scrape
-
- `-s, --save` : Saves output to a .txt file
-  
-  
-Optional arguments:
-- `-A, --aggressive`: Number of threads for aggressive scan (default: 4)
-
-## Contributing
-
-Contributions are welcome! If you find any bugs or have suggestions for improvement, please open an issue or submit a pull request.
-
-## License
-
-This project is licensed under the MIT License.
