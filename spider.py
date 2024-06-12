@@ -60,7 +60,7 @@ def main():
     webTarget = args.url
     
     if not webTarget.endswith('/'):
-        webTarget += '/html'
+        webTarget += '/'
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=args.aggressive) as executor:
         initial_links = scrape_page(webTarget)
