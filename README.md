@@ -8,6 +8,7 @@ Spider Scraper is a powerful and versatile web scraping tool designed to efficie
 - Handle JavaScript-based links and external scripts<br>
 - Option to save scraped links to a file<br>
 - Aggressive scan mode for faster scraping<br>
+- Form detection system <br>
 
 ## Installation
 1. `git clone https://github.com/Anonidentiti/spider-scraper.git `<br>
