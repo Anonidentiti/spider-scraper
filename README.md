@@ -12,10 +12,10 @@ Spider Scraper is a powerful and versatile web scraping tool designed to efficie
 
 ## Installation
 1. `git clone https://github.com/Anonidentiti/spider-scraper.git `<br>
-2 install the required dependencies, run:<br>
-  `pip install -r requirements.txt`<br>
-  or<br>
-  `pip3 install -r requirements.txt` <br>
+2. install the required dependencies, run:<br>
+   `pip install -r requirements.txt`<br>
+   or<br>
+   `pip3 install -r requirements.txt` <br>
 
 ## Options
 Command-Line Options<br>
