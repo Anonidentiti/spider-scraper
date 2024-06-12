@@ -21,9 +21,10 @@ Command-Line Options<br>
 `-u <url>`: The URL of the website you want to scrape.<br>
 `-s <output_file>`: (Optional) The name of the file where the scraped links will be saved.<br>
 `-A <aggressive_level>`: (Optional) The level of aggressiveness for the scan. Higher values increase speed but may use more resources.<br>
+`f, --forms`: Enables the detection of forms on the page.
 
-## Usage
-`python3 spider.py -u <url> -s <output_file> -A <aggressive_level_in_number>`
+## Full usage
+`python3 spider.py -u <url> -s <output_file> -A <aggressive_level_in_number> -f `
 
 
 
