@@ -91,7 +91,7 @@ def main():
     for i, link in enumerate(allLinks, start=1):
         output_line = f"{Fore.GREEN}[{i}] {link}{Style.RESET_ALL}"
         print(output_line)
-        time.sleep(0.5)
+        time.sleep(0.1)
         output_lines.append(f"[{i}] {link}")
 
     if args.save:
