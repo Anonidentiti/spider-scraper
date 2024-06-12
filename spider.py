@@ -16,7 +16,6 @@ def scrape_page(url):
         response = requests.get(url)
         response.raise_for_status()
         
-        # Check if content type is application/x
         if response.headers.get('content-type') and 'application/x' in response.headers['content-type']:
             print_warning(f"Error with finding links in {url}. Please look into it manually using decryption tools or other methods.")
             return []
@@ -55,6 +54,7 @@ def main():
     parser = argparse.ArgumentParser(description='Web scraping tool')
     parser.add_argument('-u', '--url', help='URL to scrape', required=True)
     parser.add_argument('-A', '--aggressive', type=int, default=4, help='Number of threads for aggressive scan (default: 4)')
+    parser.add_argument('-s', '--save', type=str, help='File to save the results')
     args = parser.parse_args()
     
     webTarget = args.url
@@ -63,15 +63,11 @@ def main():
         webTarget += '/html'
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=args.aggressive) as executor:
-        # Scrape the initial page
         initial_links = scrape_page(webTarget)
         allLinks.update(initial_links)
 
-        # Initialize tqdm with the total number of links to scrape
         with tqdm(total=len(initial_links), desc="Scraping") as pbar:
-            # Submit scraping tasks for each link found on the initial page
             future_to_url = {executor.submit(scrape_page, link): link for link in initial_links}
-            # Iterate over completed tasks
             for future in concurrent.futures.as_completed(future_to_url):
                 link = future_to_url[future]
                 try:
@@ -79,19 +75,24 @@ def main():
                 except Exception as exc:
                     print_warning(f"Scraping failed for {link}: {exc}")
                 else:
-                    # Update progress bar
                     pbar.update(len(found_links))
-
-                    # Submit scraping tasks for the newly found links
                     for new_link in found_links:
                         if new_link not in allLinks:
                             allLinks.add(new_link)
                             future_to_url[executor.submit(scrape_page, new_link)] = new_link
 
-    # Print overall output with numbers
+    output_lines = []
     print("\nOverall Output:")
     for i, link in enumerate(allLinks, start=1):
-        print(f"{Fore.GREEN}[{i}] {link}{Style.RESET_ALL}")
+        output_line = f"{Fore.GREEN}[{i}] {link}{Style.RESET_ALL}"
+        print(output_line)
+        output_lines.append(f"[{i}] {link}")
+
+    if args.save:
+        with open(args.save, 'w') as f:
+            for line in output_lines:
+                f.write(line + '\n')
+        print(f"\nResults saved to {args.save}")
 
 if __name__ == "__main__":
     main()
