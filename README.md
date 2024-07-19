@@ -26,8 +26,8 @@ Command-Line Options<br>
 `-A <aggressive_level>`: (Optional) The level of aggressiveness for the scan. Higher values increase speed but may use more resources.<br>
 `f, --forms`: Enables the detection of forms on the page.
  `--find-ips`: FIND_IPS   File containing URLs to find their IP addresses
- `--dnsenum `: Perform DNS enumeration using dnsenum
-
+ `--dnsenum `: Perform DNS enumeration using dnsenum but the format of the site is <example.com> if you are not using this then the url can be https://<example.com>/ <br>
+ 
 ## Full usage
 `python3 spider.py -u <url> -s <output_file> -A <aggressive_level_in_number> -f  --dnsenum`
 
