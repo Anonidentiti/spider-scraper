@@ -5,3 +5,5 @@ urllib3
 tqdm
 colorama
 time
+subprocess
+socket
