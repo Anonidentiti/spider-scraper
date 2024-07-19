@@ -10,6 +10,8 @@ Spider Scraper is a powerful and versatile web scraping tool designed to efficie
 - Aggressive scan mode for faster scraping<br>
 - Form detection system <br>
 - Find ip addresses of the ip addresses found <br>
+- identify subdomains by querying DNS servers using dnsenum <br>
+
 ## Installation
 1. `git clone https://github.com/Anonidentiti/spider-scraper.git `<br>
 2. install the required dependencies, run:<br>
@@ -23,10 +25,11 @@ Command-Line Options<br>
 `-s <output_file>`: (Optional) The name of the file where the scraped links will be saved.<br>
 `-A <aggressive_level>`: (Optional) The level of aggressiveness for the scan. Higher values increase speed but may use more resources.<br>
 `f, --forms`: Enables the detection of forms on the page.
- `--find-ips` :FIND_IPS   File containing URLs to find their IP addresses
+ `--find-ips`: FIND_IPS   File containing URLs to find their IP addresses
+ `--dnsenum `: Perform DNS enumeration using dnsenum
 
 ## Full usage
-`python3 spider.py -u <url> -s <output_file> -A <aggressive_level_in_number> -f `
+`python3 spider.py -u <url> -s <output_file> -A <aggressive_level_in_number> -f  --dnsenum`
 
 
 
